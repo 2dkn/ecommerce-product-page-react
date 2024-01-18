@@ -19,8 +19,17 @@ html {
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-content: center;
-  height: 100vh;
-  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: $fontFamily;
+}
+
+.container {
+  width: 100%;
+}
+
+.header-container {
+}
+
+.imgcontent-container {
 }
