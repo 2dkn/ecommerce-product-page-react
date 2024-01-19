@@ -1,19 +1,41 @@
-import logo from "../src/images/logo.svg";
-import avatar from "../src/images/image-avatar.png";
+import {
+  logo,
+  cart,
+  close,
+  deletebtn,
+  menu,
+  minus,
+  next,
+  plus,
+  previous,
+  avatar,
+  thumbnail1,
+  thumbnail2,
+  thumbnail3,
+  thumbnail4,
+  image1,
+  image2,
+  image3,
+  image4,
+} from "./images";
 import "../src/dist/styles.css";
 
 function App() {
   return (
     <div className="container">
       <header className="header-container">
-        <img src={logo} alt="sneakers" />
-        <p>Collection</p>
-        <p>Men</p>
-        <p>Women</p>
-        <p>About</p>
-        <p>Contact</p>
-        <button>cart</button>
-        <img src={avatar} alt="Man glasses" />
+        <div className="header-left">
+          <img className="logo" src={logo} alt="sneakers" />
+          <p className="links">Collection</p>
+          <p className="links">Men</p>
+          <p className="links">Women</p>
+          <p className="links">About</p>
+          <p className="links">Contact</p>
+        </div>
+        <div className="header-right">
+          <img className="cart" src={cart} alt="cart button" />
+          <img className="avatar" src={avatar} alt="Man glasses" />
+        </div>
       </header>
       <div className="imgcontent-container">
         <div className="images"></div>

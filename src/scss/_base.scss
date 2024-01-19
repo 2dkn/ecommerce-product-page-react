@@ -14,6 +14,8 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  width: 100%;
+  height: 75%;
 }
 
 body {
@@ -26,9 +28,52 @@ body {
 
 .container {
   width: 100%;
+  min-height: 33rem;
 }
 
 .header-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10rem;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40rem;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $darkGrayBlue;
+  gap: 4.5rem;
+}
+
+.logo {
+  width: 35%;
+  max-height: 4rem;
+  padding-right: 2rem;
+}
+
+.links {
+  font-size: 1.5rem;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.cart {
+  width: 15%;
+  height: 2rem;
+}
+
+.avatar {
+  width: 35%;
 }
 
 .imgcontent-container {
