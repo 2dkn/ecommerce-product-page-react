@@ -18,28 +18,42 @@ import {
   image3,
   image4,
 } from "./images";
+import Header from "./components/Header";
 import "../src/dist/styles.css";
 
 function App() {
   return (
     <div className="container">
-      <header className="header-container">
-        <div className="header-left">
-          <img className="logo" src={logo} alt="sneakers" />
-          <p className="links">Collection</p>
-          <p className="links">Men</p>
-          <p className="links">Women</p>
-          <p className="links">About</p>
-          <p className="links">Contact</p>
+      <Header />
+      <div className="content-container">
+        <div className="image-container">
+          <div className="big-images">
+            <img className="big-sneaker" src={image1} alt="big sneaker" />
+          </div>
+          <div className="small-images">
+            <img
+              className="small-sneaker"
+              src={thumbnail1}
+              alt="small sneaker"
+            />
+            <img
+              className="small-sneaker"
+              src={thumbnail2}
+              alt="small sneaker"
+            />
+            <img
+              className="small-sneaker"
+              src={thumbnail3}
+              alt="small sneaker"
+            />
+            <img
+              className="small-sneaker"
+              src={thumbnail4}
+              alt="small sneaker"
+            />
+          </div>
         </div>
-        <div className="header-right">
-          <img className="cart" src={cart} alt="cart button" />
-          <img className="avatar" src={avatar} alt="Man glasses" />
-        </div>
-      </header>
-      <div className="imgcontent-container">
-        <div className="images"></div>
-        <div className="content">
+        <div className="details">
           <h1>Sneaker Company</h1>
           <h3>Fall Limited Edition Sneakers</h3>
           <p>

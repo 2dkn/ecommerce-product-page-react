@@ -36,7 +36,10 @@ body {
   height: 10rem;
   justify-content: space-evenly;
   align-items: center;
-  gap: 40rem;
+  gap: 35rem;
+  border-bottom: 2px solid hsla(210, 3%, 42%, 0.185);
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .header-left {
@@ -54,7 +57,10 @@ body {
 }
 
 .links {
+  text-decoration: none;
+  color: hsl(219, 9%, 45%);
   font-size: 1.5rem;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .header-right {
@@ -72,6 +78,31 @@ body {
 
 .avatar {
   width: 35%;
+}
+
+.content-container {
+  display: flex;
+  padding: 10rem 15rem;
+  gap: 10rem;
+}
+
+.big-sneaker {
+  border-radius: 2rem;
+  width: 100%;
+  height: 44rem;
+}
+
+.small-images {
+  display: flex;
+  padding-top: 2rem;
+  gap: 1rem;
+}
+
+.small-sneaker {
+  border-radius: 2rem;
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
