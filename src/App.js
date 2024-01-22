@@ -67,10 +67,14 @@ function App() {
             <p>$250.00</p>
           </div>
           <div className="buttons">
-            <button>-</button>
+            <button>
+              <img src={minus} alt="minus sign" />
+            </button>
             <p>0</p>
-            <button>+</button>
-            <button>Add to Cart</button>
+            <button>
+              <img src={plus} alt="plus sign" />
+            </button>
+            <button className="cart-btn">Add to Cart</button>
           </div>
         </div>
       </div>

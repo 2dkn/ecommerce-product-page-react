@@ -22,26 +22,24 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  //   height: 100%;
   font-family: $fontFamily;
 }
 
 .container {
   width: 100%;
-  min-height: 33rem;
+  //   min-height: 33rem;
 }
 
 .header-container {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 10rem;
-  justify-content: space-evenly;
+  min-height: 10rem;
+  justify-content: space-between;
   align-items: center;
-  gap: 35rem;
+  gap: 30rem;
   border-bottom: 2px solid hsla(210, 3%, 42%, 0.185);
-  padding-right: 2rem;
-  padding-left: 2rem;
 }
 
 .header-left {
@@ -84,8 +82,11 @@ body {
 
 .content-container {
   display: flex;
-  padding: 10rem 15rem;
-  gap: 10rem;
+  justify-content: center;
+  padding-top: 8rem;
+  padding-left: 4rem;
+  gap: 13rem;
+  //   max-width: 70rem;
 }
 
 .big-images {
@@ -112,7 +113,7 @@ body {
 .details {
   display: flex;
   flex-direction: column;
-  max-width: 50rem;
+  max-width: 43rem;
 
   h1 {
     font-size: 1.4rem;
@@ -132,6 +133,7 @@ body {
     font-size: 16px;
     color: $darkGrayBlue;
     padding-bottom: 4rem;
+    line-height: 1.8;
   }
 }
 
@@ -141,11 +143,11 @@ body {
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-  width: 14rem;
+  width: 16rem;
 
   p {
     &:first-child {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: 700;
       line-height: 1;
     }
@@ -159,9 +161,12 @@ body {
     &:nth-child(3) {
       font-size: 1.5rem;
       color: $grayBlue;
+      text-decoration: line-through;
     }
   }
 }
 
 .buttons {
+  display: flex;
+  flex-direction: row;
 }
