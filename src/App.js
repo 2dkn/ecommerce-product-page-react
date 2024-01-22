@@ -1,6 +1,7 @@
 import {
   logo,
   cart,
+  cart2,
   close,
   deletebtn,
   menu,
@@ -18,6 +19,7 @@ import {
   image3,
   image4,
 } from "./images";
+
 import Header from "./components/Header";
 import "../src/dist/styles.css";
 
@@ -67,14 +69,17 @@ function App() {
             <p>$250.00</p>
           </div>
           <div className="buttons">
-            <button>
+            <button className="minusplus-btn">
               <img src={minus} alt="minus sign" />
             </button>
-            <p>0</p>
-            <button>
+            <p className="count">0</p>
+            <button className="plusminus-btn">
               <img src={plus} alt="plus sign" />
             </button>
-            <button className="cart-btn">Add to Cart</button>
+            <button className="cart-btn">
+              <img className="cart2" src={cart2} alt="cart button" />
+              Add to cart
+            </button>
           </div>
         </div>
       </div>

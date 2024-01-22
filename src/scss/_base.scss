@@ -143,7 +143,7 @@ body {
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-  width: 16rem;
+  width: 20rem;
 
   p {
     &:first-child {
@@ -152,16 +152,23 @@ body {
       line-height: 1;
     }
     &:nth-child(2) {
-      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.7rem;
       font-weight: 700;
       color: $orange;
-      background-color: hsl(26, 84%, 83%);
+      background-color: hsl(26, 100%, 91%);
+      width: 5rem;
+      border-radius: 0.4rem;
+      min-height: 2.5rem;
     }
 
     &:nth-child(3) {
       font-size: 1.5rem;
       color: $grayBlue;
       text-decoration: line-through;
+      font-weight: 700;
     }
   }
 }
@@ -169,4 +176,68 @@ body {
 .buttons {
   display: flex;
   flex-direction: row;
+  padding-top: 3rem;
+  // cursor: pointer;
+  min-height: 8rem;
+}
+
+.minusplus-btn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 1.4rem;
+  text-decoration: none;
+  border: none;
+  width: 6rem;
+  min-height: 4rem;
+  background-color: $lightGrayBlue;
+  border-radius: 0.4rem 0 0 0.4rem;
+  cursor: pointer;
+}
+
+.plusminus-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 1.4rem;
+  text-decoration: none;
+  border: none;
+  width: 6rem;
+  min-height: 4rem;
+  background-color: $lightGrayBlue;
+  border-radius: 0 0.4rem 0.4rem 0;
+  cursor: pointer;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  width: 2rem;
+  justify-content: center;
+  background-color: $lightGrayBlue;
+  min-height: 4rem;
+  // cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border: none;
+  margin-left: 4rem;
+  background-color: $orange;
+  color: $white;
+  width: 25rem;
+  border-radius: 0.8rem;
+  font-family: $fontFamily;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cart2 {
+  width: 1.5rem;
+  // padding-right: rem;
 }

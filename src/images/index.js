@@ -1,5 +1,6 @@
 export { default as logo } from "./logo.svg";
 export { default as cart } from "./icon-cart.svg";
+export { default as cart2 } from "./icon-cart2.svg";
 export { default as close } from "./icon-close.svg";
 export { default as deletebtn } from "./icon-delete.svg";
 export { default as menu } from "./icon-menu.svg";
