@@ -110,4 +110,48 @@ body {
   cursor: pointer;
 }
 .details {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+
+  h1 {
+    font-size: 1.4rem;
+    color: hsl(26, 100%, 64%);
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 4rem;
+    color: $veryDarkBlue;
+    padding-bottom: 3rem;
+  }
+
+  > p {
+    font-size: 16px;
+    color: $darkGrayBlue;
+    padding-bottom: 4rem;
+  }
+}
+
+.prices {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  width: 12rem;
+
+  p {
+    &:first-child {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    &:nth-child(2) {
+    }
+  }
+}
+
+.buttons {
 }

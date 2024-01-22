@@ -54,20 +54,24 @@ function App() {
           </div>
         </div>
         <div className="details">
-          <h1>Sneaker Company</h1>
+          <h1>SNEAKER COMPANY</h1>
           <h3>Fall Limited Edition Sneakers</h3>
           <p>
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they’ll withstand everything
             the weather can offer.
           </p>
-          <p>$125.00</p>
-          <p>50%</p>
-          <p>$250.00</p>
-          <button>-</button>
-          <p>0</p>
-          <button>+</button>
-          <button>Add to Cart</button>
+          <div className="prices">
+            <p>$125.00</p>
+            <p>50%</p>
+            <p>$250.00</p>
+          </div>
+          <div className="buttons">
+            <button>-</button>
+            <p>0</p>
+            <button>+</button>
+            <button>Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
