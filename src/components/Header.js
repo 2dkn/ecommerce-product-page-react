@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../images/logo.svg";
-import cart from "../images/icon-cart.svg";
 import avatar from "../images/image-avatar.png";
+import { ReactComponent as Cart } from "../images/icon-cart.svg";
 
 function Header() {
   return (
@@ -25,7 +25,9 @@ function Header() {
         </a>
       </div>
       <div className="header-right">
-        <img className="cart" src={cart} alt="cart button" />
+        <button className="cart">
+          <Cart fill="#69707D" />
+        </button>
         <img className="avatar" src={avatar} alt="Man glasses" />
       </div>
     </header>

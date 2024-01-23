@@ -34,7 +34,7 @@ body {
   min-height: 10rem;
   justify-content: space-between;
   align-items: center;
-  gap: 30rem;
+  gap: 28rem;
   border-bottom: 2px solid hsla(210, 3%, 42%, 0.185);
 }
 
@@ -55,8 +55,12 @@ body {
 .links {
   text-decoration: none;
   color: hsl(219, 9%, 45%);
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-family: "Kumbh Sans", sans-serif;
+}
+
+.links:hover {
+  color: black;
 }
 
 .header-right {
@@ -68,12 +72,27 @@ body {
 }
 
 .cart {
-  width: 15%;
+  border: none;
+  background-color: transparent;
+  width: 100%;
   height: 2rem;
+  cursor: pointer;
+}
+
+.cart:hover svg {
+  fill: black;
 }
 
 .avatar {
-  width: 35%;
+  width: 5rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.avatar:hover {
+  width: 5rem;
+  outline: 0.2rem solid orange;
+  border-radius: 3rem;
 }
 
 .content-container {
@@ -93,7 +112,7 @@ body {
 .small-images {
   display: flex;
   padding-top: 2rem;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .small-sneaker {
@@ -101,6 +120,10 @@ body {
   width: 10rem;
   height: 10rem;
   cursor: pointer;
+}
+
+.small-sneaker:hover {
+  opacity: 30%;
 }
 
 .details {
@@ -163,7 +186,7 @@ body {
   display: flex;
   flex-direction: row;
   padding-top: 3rem;
-  min-height: 8rem;
+  min-height: 8.5rem;
 }
 
 .minusplus-btn {
@@ -173,11 +196,19 @@ body {
   padding-left: 1.4rem;
   text-decoration: none;
   border: none;
-  width: 6rem;
+  width: 6.5rem;
   min-height: 4rem;
   background-color: hsl(223, 64%, 98%);
   border-radius: 0.4rem 0 0 0.4rem;
   cursor: pointer;
+}
+
+.minus svg {
+  fill: color;
+}
+
+.minusplus-btn:hover svg {
+  fill: hsl(26, 100%, 77%);
 }
 
 .plusminus-btn {
@@ -187,11 +218,19 @@ body {
   padding-right: 1.4rem;
   text-decoration: none;
   border: none;
-  width: 6rem;
+  width: 6.5rem;
   min-height: 4rem;
   background-color: hsl(223, 64%, 98%);
   border-radius: 0 0.4rem 0.4rem 0;
   cursor: pointer;
+}
+
+.plusminus-btn:hover svg {
+  fill: hsl(26, 100%, 77%);
+}
+
+.plus {
+  fill: red;
 }
 
 .count {
@@ -211,14 +250,18 @@ body {
   align-items: center;
   gap: 1.5rem;
   border: none;
-  margin-left: 4rem;
+  margin-left: 3rem;
   background-color: hsl(26, 100%, 55%);
   color: hsl(0, 0%, 100%);
-  width: 25rem;
+  width: 24rem;
   border-radius: 0.8rem;
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 700;
   cursor: pointer;
+}
+
+.cart-btn:hover {
+  background-color: hsl(26, 100%, 77%);
 }
 
 .cart2 {
