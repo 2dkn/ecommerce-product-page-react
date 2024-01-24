@@ -35,7 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 28rem;
-  border-bottom: 2px solid hsla(210, 3%, 42%, 0.185);
+  border-bottom: 1.5px solid hsla(210, 3%, 42%, 0.185);
 }
 
 .header-left {
@@ -44,11 +44,12 @@ body {
   justify-content: space-between;
   color: hsl(219, 9%, 45%);
   gap: 4.5rem;
+  padding-top: 5rem;
 }
 
 .logo {
   width: 35%;
-  max-height: 4rem;
+  max-height: 2rem;
   padding-right: 2rem;
 }
 
@@ -57,10 +58,13 @@ body {
   color: hsl(219, 9%, 45%);
   font-size: 1.5em;
   font-family: "Kumbh Sans", sans-serif;
+  padding-bottom: 4rem;
+  border-bottom: 0.4rem solid transparent;
 }
 
 .links:hover {
   color: black;
+  border-bottom-color: hsl(26, 100%, 55%);
 }
 
 .header-right {
