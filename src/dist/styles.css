@@ -44,7 +44,6 @@ body {
   justify-content: space-between;
   color: hsl(219, 9%, 45%);
   gap: 4.5rem;
-  padding-top: 5rem;
 }
 
 .logo {
@@ -56,15 +55,17 @@ body {
 .links {
   text-decoration: none;
   color: hsl(219, 9%, 45%);
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-family: "Kumbh Sans", sans-serif;
-  padding-bottom: 4rem;
-  border-bottom: 0.4rem solid transparent;
 }
 
 .links:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.3rem;
+  text-decoration-color: hsl(26, 100%, 55%);
+  text-decoration-style: solid;
+  text-underline-offset: 2.7em;
   color: black;
-  border-bottom-color: hsl(26, 100%, 55%);
 }
 
 .header-right {
@@ -95,7 +96,7 @@ body {
 
 .avatar:hover {
   width: 5rem;
-  outline: 0.2rem solid orange;
+  outline: 0.2rem solid hsl(26, 100%, 55%);
   border-radius: 3rem;
 }
 
@@ -108,9 +109,10 @@ body {
 }
 
 .big-sneaker {
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   width: 100%;
   height: 44rem;
+  cursor: pointer;
 }
 
 .small-images {
@@ -120,14 +122,20 @@ body {
 }
 
 .small-sneaker {
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   width: 10rem;
   height: 10rem;
   cursor: pointer;
 }
 
 .small-sneaker:hover {
-  opacity: 30%;
+  background-clip: padding-box;
+  opacity: 0.6;
+}
+
+.small-sneaker.selected {
+  opacity: 0.3;
+  outline: 0.2rem solid hsl(26, 100%, 55%);
 }
 
 .details {
@@ -141,6 +149,7 @@ body {
   padding-top: 5rem;
   padding-bottom: 2rem;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 .details h3 {
   font-size: 4rem;
@@ -150,7 +159,7 @@ body {
 .details > p {
   font-size: 16px;
   color: hsl(219, 9%, 45%);
-  padding-bottom: 4rem;
+  padding-bottom: 3.5rem;
   line-height: 1.8;
 }
 
@@ -257,7 +266,7 @@ body {
   margin-left: 3rem;
   background-color: hsl(26, 100%, 55%);
   color: hsl(0, 0%, 100%);
-  width: 24rem;
+  width: 25rem;
   border-radius: 0.8rem;
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 700;
