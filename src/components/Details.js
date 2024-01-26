@@ -1,9 +1,21 @@
-import React from "react";
-import { minus, plus, cart2 } from "../images";
+import React, { useState } from "react";
+import { cart2 } from "../images";
 import { ReactComponent as Minus } from "../images/icon-minus.svg";
 import { ReactComponent as Plus } from "../images/icon-plus.svg";
 
 function Details() {
+  const [count, setCount] = useState(0);
+
+  const handleCountUp = () => {
+    setCount(count + 1);
+  };
+
+  const handleCountDown = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
+
   return (
     <div className="details">
       <h1>SNEAKER COMPANY</h1>
@@ -19,11 +31,11 @@ function Details() {
         <p>$250.00</p>
       </div>
       <div className="buttons">
-        <button className="minusplus-btn">
+        <button className="minusplus-btn" onClick={handleCountDown}>
           <Minus fill="#FF7E1B" />
         </button>
-        <p className="count">0</p>
-        <button className="plusminus-btn">
+        <p className="count">{count}</p>
+        <button className="plusminus-btn" onClick={handleCountUp}>
           <Plus fill="#FF7E1B" />
         </button>
         <button className="cart-btn">
@@ -36,7 +48,3 @@ function Details() {
 }
 
 export default Details;
-
-{
-  /* <img className="minus" src={minus} alt="minus sign" /> */
-}
