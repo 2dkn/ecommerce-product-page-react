@@ -1,32 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import { image1, image2, image3, image4 } from "../images";
 import { thumbnail1, thumbnail2, thumbnail3, thumbnail4 } from "../images";
-import Overlay from "../components/Overlay";
+import { ReactComponent as Close } from "../images/icon-close.svg";
+import { ReactComponent as Previous } from "../images/icon-previous.svg";
+import { ReactComponent as Next } from "../images/icon-next.svg";
 
-function Gallery() {
-  const [selectedImage, setSelectedImage] = useState(image1);
-  const [selectedThumbnail, setSelectedThumbnail] = useState(thumbnail1);
-  const [isOverlayVisible, setOverlayVisible] = useState(false);
-
-  const handleThumbnailClick = (newImage, newThumbnail) => {
-    setSelectedImage(newImage);
-    setSelectedThumbnail(newThumbnail);
-  };
-
-  const handleBigSneakerClick = () => {
-    setOverlayVisible(true);
-  };
-
-  const handleOverlayClose = () => {
-    setOverlayVisible(false);
-  };
-
+function Overlay({
+  selectedImage,
+  selectedThumbnail,
+  handleThumbnailClick,
+  onClose,
+}) {
   return (
-    <div className="image-container">
-      <div className="big-images" onClick={handleBigSneakerClick}>
-        <img className="big-sneaker" src={selectedImage} alt="big sneaker" />
+    <div className="overlay">
+      <div className="overlay-content">
+        <button className="close" onClick={onClose}>
+          <Close />
+        </button>
+        <img className="" src={selectedImage} alt="overlay sneaker" />
       </div>
-      <div className="small-images">
+      <div className="overlay-imgs">
         <img
           className={`small-sneaker ${
             selectedThumbnail === thumbnail1 ? "selected" : ""
@@ -60,16 +53,8 @@ function Gallery() {
           onClick={() => handleThumbnailClick(image4, thumbnail4)}
         />
       </div>
-      {isOverlayVisible && (
-        <Overlay
-          selectedImage={selectedImage}
-          selectedThumbnail={selectedThumbnail}
-          onClose={handleOverlayClose}
-          handleThumbnailClick={handleThumbnailClick}
-        />
-      )}
     </div>
   );
 }
 
-export default Gallery;
+export default Overlay;
