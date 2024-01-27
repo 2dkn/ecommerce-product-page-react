@@ -64,8 +64,10 @@ function Gallery() {
         <Overlay
           selectedImage={selectedImage}
           selectedThumbnail={selectedThumbnail}
-          onClose={handleOverlayClose}
           handleThumbnailClick={handleThumbnailClick}
+          onClose={handleOverlayClose}
+          setSelectedImage={setSelectedImage}
+          setSelectedThumbnail={setSelectedThumbnail}
         />
       )}
     </div>
