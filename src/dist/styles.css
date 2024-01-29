@@ -70,6 +70,7 @@ body {
 
 .header-right {
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -91,11 +92,12 @@ body {
 .checkout {
   display: flex;
   position: absolute;
-  top: 10rem;
-  right: 8rem;
-  width: 36rem;
-  min-height: 23rem;
-  background-color: yellow;
+  top: 6rem;
+  right: -6rem;
+  width: 38rem;
+  min-height: 25rem;
+  background-color: white;
+  box-shadow: 1px 7px 5px rgba(0, 0, 0, 0.125);
   border-radius: 1.5rem;
   flex-direction: column;
 }
@@ -110,6 +112,17 @@ body {
   border-bottom: 1.5px solid hsla(210, 3%, 42%, 0.185);
 }
 
+.cart-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 19rem;
+  font-size: 2rem;
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(219, 9%, 45%);
+}
+
 .checkout div:last-child {
   display: flex;
   width: 100%;
@@ -117,19 +130,43 @@ body {
 }
 
 .checkout-btn {
-  width: 30rem;
+  width: 32rem;
   min-height: 5rem;
   border: none;
   background-color: hsl(26, 100%, 55%);
   color: hsl(0, 0%, 100%);
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background-color: hsl(26, 100%, 77%);
+}
+
+.checkout-btn:active {
+  transform: scale(0.95);
 }
 
 .trash {
   width: 3rem;
   height: 3rem;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.trash:hover svg {
+  fill: hsl(26, 100%, 55%);
+}
+
+.trash:active {
+  transform: scale(0.95);
 }
 
 .sneaker-cart {
@@ -141,10 +178,23 @@ body {
 .price-count {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  max-width: 40rem;
   height: 10rem;
   justify-content: center;
-  padding-top: 2rem;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 2rem;
+}
+
+.price-count p:first-of-type {
+  font-size: 1.5rem;
+  padding-bottom: 1.2rem;
+  color: hsl(219, 9%, 45%);
+}
+
+.price-count p:nth-of-type(2) {
+  font-size: 1.5rem;
+  color: hsl(219, 9%, 45%);
 }
 
 .avatar {
@@ -193,7 +243,6 @@ body {
 }
 
 .small-sneaker.selected {
-  opacity: 0.4;
   outline: 0.2rem solid hsl(26, 100%, 55%);
 }
 
@@ -283,6 +332,10 @@ body {
   fill: hsl(26, 100%, 77%);
 }
 
+.minusplus-btn:active svg {
+  transform: scale(0.95);
+}
+
 .plusminus-btn {
   display: flex;
   justify-content: end;
@@ -301,8 +354,8 @@ body {
   fill: hsl(26, 100%, 77%);
 }
 
-.plus {
-  fill: red;
+.plusminus-btn:active svg {
+  transform: scale(0.95);
 }
 
 .count {
@@ -334,6 +387,10 @@ body {
 
 .cart-btn:hover {
   background-color: hsl(26, 100%, 77%);
+}
+
+.cart-btn:active {
+  transform: scale(0.95);
 }
 
 .cart2 {

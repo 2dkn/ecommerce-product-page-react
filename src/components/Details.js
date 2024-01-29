@@ -3,7 +3,7 @@ import { cart2 } from "../images";
 import { ReactComponent as Minus } from "../images/icon-minus.svg";
 import { ReactComponent as Plus } from "../images/icon-plus.svg";
 
-function Details() {
+function Details({ onAddToCart }) {
   const [count, setCount] = useState(0);
 
   const handleCountUp = () => {
@@ -14,6 +14,10 @@ function Details() {
     if (count > 0) {
       setCount(count - 1);
     }
+  };
+
+  const handleAddToCart = () => {
+    onAddToCart(count);
   };
 
   return (
@@ -38,7 +42,7 @@ function Details() {
         <button className="plusminus-btn" onClick={handleCountUp}>
           <Plus fill="#FF7E1B" />
         </button>
-        <button className="cart-btn">
+        <button className="cart-btn" onClick={handleAddToCart}>
           <img className="cart2" src={cart2} alt="cart button" />
           Add to cart
         </button>

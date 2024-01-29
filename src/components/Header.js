@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../images/logo.svg";
 import avatar from "../images/image-avatar.png";
 import { ReactComponent as Cart } from "../images/icon-cart.svg";
 import { ReactComponent as Trash } from "../images/icon-delete.svg";
 import sneaker from "../images/image-product-1-thumbnail.jpg";
 
-function Header() {
+function Header({ cartCount }) {
   const [isCheckoutOpen, setCheckoutOpen] = useState(false);
+  const [count, setCount] = useState(cartCount);
+  const [isEmpty, setIsEmpty] = useState(cartCount === 0);
+
+  const itemPrice = 125.0; // Assuming the item price is $125.00
+
+  const getTotalPrice = () => {
+    return (itemPrice * cartCount).toFixed(2); // Keep it formatted with two decimal places
+  };
+
+  useEffect(() => {
+    setCount(cartCount);
+    setIsEmpty(cartCount === 0);
+  }, [cartCount]);
 
   const toggleCheckout = () => {
     setCheckoutOpen(!isCheckoutOpen);
+  };
+
+  const handleCountReset = () => {
+    setCount(0);
   };
 
   return (
@@ -41,18 +58,32 @@ function Header() {
             <div>
               <h1>Cart</h1>
             </div>
-            <div className="price-count">
-              <img className="sneaker-cart" src={sneaker}></img>
-              <p>Fall Limited Edition Sneakers</p>
-              <p>$125.00 x 1</p>
-              <p>Total Price</p>
-              <button className="trash">
-                <Trash />
-              </button>
-            </div>
-            <div>
-              <button className="checkout-btn">Checkout</button>
-            </div>
+            {cartCount === 0 ? (
+              <p className="cart-empty">Your cart is empty</p>
+            ) : (
+              <>
+                <div className="price-count">
+                  <img
+                    className="sneaker-cart"
+                    src={sneaker}
+                    alt="sneaker"
+                  ></img>
+                  <div>
+                    <p>Fall Limited Edition Sneakers</p>
+                    <p>
+                      ${itemPrice.toFixed(2)} x {cartCount}{" "}
+                      <b>${getTotalPrice()}</b>
+                    </p>
+                  </div>
+                  <button className="trash" onClick={handleCountReset}>
+                    <Trash fill="#C3CAD9" />
+                  </button>
+                </div>
+                <div>
+                  <button className="checkout-btn">Checkout</button>
+                </div>
+              </>
+            )}
           </div>
         )}
         <img className="avatar" src={avatar} alt="Man glasses" />
