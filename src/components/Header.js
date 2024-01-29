@@ -27,6 +27,7 @@ function Header({ cartCount }) {
 
   const handleCountReset = () => {
     setCount(0);
+    setIsEmpty(true);
   };
 
   return (
@@ -58,7 +59,7 @@ function Header({ cartCount }) {
             <div>
               <h1>Cart</h1>
             </div>
-            {cartCount === 0 ? (
+            {isEmpty ? (
               <p className="cart-empty">Your cart is empty</p>
             ) : (
               <>
@@ -75,7 +76,12 @@ function Header({ cartCount }) {
                       <b>${getTotalPrice()}</b>
                     </p>
                   </div>
-                  <button className="trash" onClick={handleCountReset}>
+                  <button
+                    className="trash"
+                    onClick={() => {
+                      handleCountReset();
+                    }}
+                  >
                     <Trash fill="#C3CAD9" />
                   </button>
                 </div>

@@ -5,21 +5,23 @@ import { ReactComponent as Close } from "../images/icon-close.svg";
 import { ReactComponent as Previous } from "../images/icon-previous.svg";
 import { ReactComponent as Next } from "../images/icon-next.svg";
 
-function Overlay({
-  selectedImage,
-  selectedThumbnail,
-  handleThumbnailClick,
-  onClose,
-}) {
+function Overlay({ selectedImage, onClose }) {
   const images = [image1, image2, image3, image4];
   const thumbnails = [thumbnail1, thumbnail2, thumbnail3, thumbnail4];
+  const [overlayImage, setOverlayImage] = useState(image1);
+  const [overlayThumbnail, setOverlayThumbnail] = useState(thumbnail1);
   const [currentIndex, setCurrentIndex] = useState(
     images.indexOf(selectedImage)
   );
 
   const handleThumbnailClickInOverlay = (newImage, newThumbnail) => {
     setCurrentIndex(images.indexOf(newImage));
-    handleThumbnailClick(newImage, newThumbnail);
+    handleOverlayThumbnailClick(newImage, newThumbnail);
+  };
+
+  const handleOverlayThumbnailClick = (newImage, newThumbnail) => {
+    setOverlayImage(newImage);
+    setOverlayThumbnail(newThumbnail);
   };
 
   const handlePreviousClick = () => {
@@ -55,46 +57,19 @@ function Overlay({
         </div>
       </div>
       <div className="overlay-imgs">
-        <img
-          className={`small-sneaker ${
-            selectedThumbnail === thumbnails[0] ? "selected" : ""
-          }`}
-          src={thumbnails[0]}
-          alt="small sneaker"
-          onClick={() =>
-            handleThumbnailClickInOverlay(images[0], thumbnails[0])
-          }
-        />
-        <img
-          className={`small-sneaker ${
-            selectedThumbnail === thumbnails[1] ? "selected" : ""
-          }`}
-          src={thumbnails[1]}
-          alt="small sneaker"
-          onClick={() =>
-            handleThumbnailClickInOverlay(images[1], thumbnails[1])
-          }
-        />
-        <img
-          className={`small-sneaker ${
-            selectedThumbnail === thumbnails[2] ? "selected" : ""
-          }`}
-          src={thumbnails[2]}
-          alt="small sneaker"
-          onClick={() =>
-            handleThumbnailClickInOverlay(images[2], thumbnails[2])
-          }
-        />
-        <img
-          className={`small-sneaker ${
-            selectedThumbnail === thumbnails[3] ? "selected" : ""
-          }`}
-          src={thumbnails[3]}
-          alt="small sneaker"
-          onClick={() =>
-            handleThumbnailClickInOverlay(images[3], thumbnails[3])
-          }
-        />
+        {thumbnails.map((thumbnail, index) => (
+          <img
+            key={index}
+            className={`small-sneaker ${
+              currentIndex === index ? "selected" : ""
+            }`}
+            src={thumbnail}
+            alt={`small sneaker ${index + 1}`}
+            onClick={() =>
+              handleThumbnailClickInOverlay(images[index], thumbnail)
+            }
+          />
+        ))}
       </div>
     </div>
   );

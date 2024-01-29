@@ -219,7 +219,7 @@ body {
   justify-content: center;
   padding-top: 8rem;
   padding-left: 4rem;
-  gap: 13rem;
+  gap: 11rem;
   //   max-width: 70rem;
 }
 
@@ -254,7 +254,7 @@ body {
 }
 
 .small-sneaker.selected {
-  // opacity: 0.4;
+  opacity: 0.4;
   outline: 0.2rem solid hsl(26, 100%, 55%);
 }
 
