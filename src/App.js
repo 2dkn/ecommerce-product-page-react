@@ -11,9 +11,13 @@ function App() {
     setCartCount((prevCount) => prevCount + quantity);
   };
 
+  const handleCartCountReset = () => {
+    setCartCount(0);
+  };
+
   return (
     <div className="container">
-      <Header cartCount={cartCount} />
+      <Header cartCount={cartCount} onCountReset={handleCartCountReset} />
       <div className="content-container">
         <Gallery />
         <Details onAddToCart={handleAddToCart} />

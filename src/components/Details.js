@@ -42,7 +42,13 @@ function Details({ onAddToCart }) {
         <button className="plusminus-btn" onClick={handleCountUp}>
           <Plus fill="#FF7E1B" />
         </button>
-        <button className="cart-btn" onClick={handleAddToCart}>
+        <button
+          className="cart-btn"
+          onClick={() => {
+            handleAddToCart();
+            setCount(0);
+          }}
+        >
           <img className="cart2" src={cart2} alt="cart button" />
           Add to cart
         </button>

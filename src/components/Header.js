@@ -5,7 +5,7 @@ import { ReactComponent as Cart } from "../images/icon-cart.svg";
 import { ReactComponent as Trash } from "../images/icon-delete.svg";
 import sneaker from "../images/image-product-1-thumbnail.jpg";
 
-function Header({ cartCount }) {
+function Header({ cartCount, onCountReset }) {
   const [isCheckoutOpen, setCheckoutOpen] = useState(false);
   const [count, setCount] = useState(cartCount);
   const [isEmpty, setIsEmpty] = useState(cartCount === 0);
@@ -26,9 +26,32 @@ function Header({ cartCount }) {
   };
 
   const handleCountReset = () => {
-    setCount(0);
     setIsEmpty(true);
+    setCount(0);
+    onCountReset();
   };
+
+  useEffect(() => {
+    if (isCheckoutOpen) {
+      const handleOutsideClick = (e) => {
+        // Check if the clicked element is outside the cart and checkout
+        if (
+          !document.querySelector(".cart").contains(e.target) &&
+          !document.querySelector(".checkout").contains(e.target)
+        ) {
+          setCheckoutOpen(false);
+        }
+      };
+
+      // Add event listener when component mounts
+      document.addEventListener("click", handleOutsideClick);
+
+      // Remove event listener when component unmounts
+      return () => {
+        document.removeEventListener("click", handleOutsideClick);
+      };
+    }
+  }, [isCheckoutOpen]);
 
   return (
     <header className="header-container">
@@ -53,6 +76,7 @@ function Header({ cartCount }) {
       <div className="header-right">
         <button className="cart" onClick={toggleCheckout}>
           <Cart fill="#69707D" />
+          {isEmpty ? "" : <span className="cart-quantity">{cartCount}</span>}
         </button>
         {isCheckoutOpen && (
           <div className="checkout">

@@ -89,6 +89,23 @@ body {
   fill: black;
 }
 
+.cart-quantity {
+  display: flex;
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(26, 100%, 55%);
+  width: 2rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 .checkout {
   display: flex;
   position: absolute;
@@ -118,9 +135,10 @@ body {
   align-items: center;
   width: 100%;
   min-height: 19rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Kumbh Sans", sans-serif;
   color: hsl(219, 9%, 45%);
+  font-weight: 700;
 }
 
 .checkout div:last-child {
