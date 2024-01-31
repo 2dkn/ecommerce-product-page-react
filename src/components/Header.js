@@ -26,7 +26,7 @@ function Header({ cartCount, onCountReset }) {
   };
 
   const handleCountReset = () => {
-    setIsEmpty(true);
+    // setIsEmpty(true);
     setCount(0);
     onCountReset();
   };
