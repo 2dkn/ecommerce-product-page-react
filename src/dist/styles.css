@@ -27,6 +27,195 @@ body {
   width: 100%;
 }
 
+.content-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 8rem;
+  padding-left: 4rem;
+  gap: 11rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  max-width: 43rem;
+}
+.details h1 {
+  font-size: 1.4rem;
+  color: hsl(26, 100%, 64%);
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.details h3 {
+  font-size: 4rem;
+  color: hsl(220, 13%, 13%);
+  padding-bottom: 3rem;
+}
+.details > p {
+  font-size: 16px;
+  color: hsl(219, 9%, 45%);
+  padding-bottom: 3.5rem;
+  line-height: 1.8;
+}
+
+.prices {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  width: 20rem;
+}
+.prices p:first-child {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.prices p:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: hsl(26, 100%, 55%);
+  background-color: hsl(26, 100%, 91%);
+  width: 5rem;
+  border-radius: 0.4rem;
+  min-height: 2.5rem;
+}
+.prices p:nth-child(3) {
+  font-size: 1.5rem;
+  color: hsl(220, 14%, 75%);
+  text-decoration: line-through;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3rem;
+  min-height: 8.5rem;
+}
+
+.minusplus-btn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 1.4rem;
+  text-decoration: none;
+  border: none;
+  width: 6.5rem;
+  min-height: 4rem;
+  background-color: hsl(223, 64%, 98%);
+  border-radius: 0.4rem 0 0 0.4rem;
+  cursor: pointer;
+}
+
+.minus svg {
+  fill: color;
+}
+
+.minusplus-btn:hover svg {
+  fill: hsl(26, 100%, 77%);
+}
+
+.minusplus-btn:active svg {
+  transform: scale(0.95);
+}
+
+.plusminus-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 1.4rem;
+  text-decoration: none;
+  border: none;
+  width: 6.5rem;
+  min-height: 4rem;
+  background-color: hsl(223, 64%, 98%);
+  border-radius: 0 0.4rem 0.4rem 0;
+  cursor: pointer;
+}
+
+.plusminus-btn:hover svg {
+  fill: hsl(26, 100%, 77%);
+}
+
+.plusminus-btn:active svg {
+  transform: scale(0.95);
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  width: 2rem;
+  justify-content: center;
+  background-color: hsl(223, 64%, 98%);
+  min-height: 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border: none;
+  margin-left: 3rem;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  width: 25rem;
+  border-radius: 0.8rem;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background-color: hsl(26, 100%, 77%);
+}
+
+.cart-btn:active {
+  transform: scale(0.95);
+}
+
+.cart2 {
+  width: 1.5rem;
+}
+
+.big-sneaker {
+  border-radius: 1.5rem;
+  width: 100%;
+  height: 44rem;
+  cursor: pointer;
+}
+
+.small-images {
+  display: flex;
+  padding-top: 2rem;
+  gap: 1.5rem;
+}
+
+.small-sneaker {
+  border-radius: 1.5rem;
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+}
+
+.small-sneaker:hover {
+  background-clip: padding-box;
+  opacity: 0.6;
+}
+
+.small-sneaker.selected {
+  opacity: 0.4;
+  outline: 0.2rem solid hsl(26, 100%, 55%);
+}
+
 .header-container {
   display: flex;
   flex-direction: row;
@@ -193,6 +382,18 @@ body {
   border-radius: 0.5rem;
 }
 
+.avatar {
+  width: 5rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.avatar:hover {
+  width: 5rem;
+  outline: 0.2rem solid hsl(26, 100%, 55%);
+  border-radius: 3rem;
+}
+
 .price-count {
   display: flex;
   flex-direction: row;
@@ -213,207 +414,6 @@ body {
 .price-count p:nth-of-type(2) {
   font-size: 1.5rem;
   color: hsl(219, 9%, 45%);
-}
-
-.avatar {
-  width: 5rem;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.avatar:hover {
-  width: 5rem;
-  outline: 0.2rem solid hsl(26, 100%, 55%);
-  border-radius: 3rem;
-}
-
-.content-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 8rem;
-  padding-left: 4rem;
-  gap: 11rem;
-}
-
-.big-sneaker {
-  border-radius: 1.5rem;
-  width: 100%;
-  height: 44rem;
-  cursor: pointer;
-}
-
-.small-images {
-  display: flex;
-  padding-top: 2rem;
-  gap: 1.5rem;
-}
-
-.small-sneaker {
-  border-radius: 1.5rem;
-  width: 10rem;
-  height: 10rem;
-  cursor: pointer;
-}
-
-.small-sneaker:hover {
-  background-clip: padding-box;
-  opacity: 0.6;
-}
-
-.small-sneaker.selected {
-  opacity: 0.4;
-  outline: 0.2rem solid hsl(26, 100%, 55%);
-}
-
-.details {
-  display: flex;
-  flex-direction: column;
-  max-width: 43rem;
-}
-.details h1 {
-  font-size: 1.4rem;
-  color: hsl(26, 100%, 64%);
-  padding-top: 5rem;
-  padding-bottom: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-.details h3 {
-  font-size: 4rem;
-  color: hsl(220, 13%, 13%);
-  padding-bottom: 3rem;
-}
-.details > p {
-  font-size: 16px;
-  color: hsl(219, 9%, 45%);
-  padding-bottom: 3.5rem;
-  line-height: 1.8;
-}
-
-.prices {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-  width: 20rem;
-}
-.prices p:first-child {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1;
-}
-.prices p:nth-child(2) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: hsl(26, 100%, 55%);
-  background-color: hsl(26, 100%, 91%);
-  width: 5rem;
-  border-radius: 0.4rem;
-  min-height: 2.5rem;
-}
-.prices p:nth-child(3) {
-  font-size: 1.5rem;
-  color: hsl(220, 14%, 75%);
-  text-decoration: line-through;
-  font-weight: 700;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  padding-top: 3rem;
-  min-height: 8.5rem;
-}
-
-.minusplus-btn {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding-left: 1.4rem;
-  text-decoration: none;
-  border: none;
-  width: 6.5rem;
-  min-height: 4rem;
-  background-color: hsl(223, 64%, 98%);
-  border-radius: 0.4rem 0 0 0.4rem;
-  cursor: pointer;
-}
-
-.minus svg {
-  fill: color;
-}
-
-.minusplus-btn:hover svg {
-  fill: hsl(26, 100%, 77%);
-}
-
-.minusplus-btn:active svg {
-  transform: scale(0.95);
-}
-
-.plusminus-btn {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding-right: 1.4rem;
-  text-decoration: none;
-  border: none;
-  width: 6.5rem;
-  min-height: 4rem;
-  background-color: hsl(223, 64%, 98%);
-  border-radius: 0 0.4rem 0.4rem 0;
-  cursor: pointer;
-}
-
-.plusminus-btn:hover svg {
-  fill: hsl(26, 100%, 77%);
-}
-
-.plusminus-btn:active svg {
-  transform: scale(0.95);
-}
-
-.count {
-  display: flex;
-  align-items: center;
-  width: 2rem;
-  justify-content: center;
-  background-color: hsl(223, 64%, 98%);
-  min-height: 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.cart-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  border: none;
-  margin-left: 3rem;
-  background-color: hsl(26, 100%, 55%);
-  color: hsl(0, 0%, 100%);
-  width: 25rem;
-  border-radius: 0.8rem;
-  font-family: "Kumbh Sans", sans-serif;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.cart-btn:hover {
-  background-color: hsl(26, 100%, 77%);
-}
-
-.cart-btn:active {
-  transform: scale(0.95);
-}
-
-.cart2 {
-  width: 1.5rem;
 }
 
 .overlay {
@@ -464,7 +464,7 @@ body {
 .close svg {
   width: 2rem;
   height: 2rem;
-  fill: gray;
+  fill: hsl(0, 0%, 100%);
 }
 
 .close svg:hover {

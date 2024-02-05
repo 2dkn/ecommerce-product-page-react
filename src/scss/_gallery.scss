@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+.big-images {
+}
+
+.big-sneaker {
+  border-radius: 1.5rem;
+  width: 100%;
+  height: 44rem;
+  cursor: pointer;
+}
+
+.small-images {
+  display: flex;
+  padding-top: 2rem;
+  gap: 1.5rem;
+}
+
+.small-sneaker {
+  border-radius: 1.5rem;
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+}
+
+.small-sneaker:hover {
+  background-clip: padding-box;
+  opacity: 0.6;
+  // outline: 0.2rem solid hsl(26, 100%, 55%);
+  // overflow: hidden;
+}
+
+.small-sneaker.selected {
+  opacity: 0.4;
+  outline: 0.2rem solid hsl(26, 100%, 55%);
+}
