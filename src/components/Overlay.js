@@ -56,19 +56,25 @@ function Overlay({ selectedImage, onClose }) {
           </button>
         </div>
       </div>
-      <div className="overlay-imgs">
+      <div className="overlay-row">
         {thumbnails.map((thumbnail, index) => (
-          <img
-            key={index}
-            className={`small-sneaker ${
-              currentIndex === index ? "selected" : ""
+          <div
+            className={`overlay-imgs ${
+              currentIndex === index ? "outlined" : ""
             }`}
-            src={thumbnail}
-            alt={`small sneaker ${index + 1}`}
-            onClick={() =>
-              handleThumbnailClickInOverlay(images[index], thumbnail)
-            }
-          />
+          >
+            <img
+              key={index}
+              className={`small-sneaker ${
+                currentIndex === index ? "selected" : ""
+              }`}
+              src={thumbnail}
+              alt={`small sneaker ${index + 1}`}
+              onClick={() =>
+                handleThumbnailClickInOverlay(images[index], thumbnail)
+              }
+            />
+          </div>
         ))}
       </div>
     </div>

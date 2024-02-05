@@ -30,7 +30,7 @@ Your users should be able to:
 ### Links
 
 - Solution URL: [Solution Site]()
-- Live Site URL: [Live Site]()
+- Live Site URL: [Live Site](/design/ecommercePic1.png)
 
 ### Built With
 

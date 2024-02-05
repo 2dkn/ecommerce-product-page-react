@@ -34,10 +34,17 @@ function Header({ cartCount, onCountReset }) {
   useEffect(() => {
     if (isCheckoutOpen) {
       const handleOutsideClick = (e) => {
-        // Check if the clicked element is outside the cart and checkout
+        const cartButton = document.querySelector(".cart");
+        const checkoutContainer = document.querySelector(".checkout");
+
+        // Check if the clicked element is outside the cart and checkout,
+        // and not one of the buttons you want to exclude
         if (
-          !document.querySelector(".cart").contains(e.target) &&
-          !document.querySelector(".checkout").contains(e.target)
+          !cartButton.contains(e.target) &&
+          !checkoutContainer.contains(e.target) &&
+          !e.target.classList.contains("minusplus-btn") &&
+          !e.target.classList.contains("plusminus-btn") &&
+          !e.target.classList.contains("cart-btn")
         ) {
           setCheckoutOpen(false);
         }
