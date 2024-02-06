@@ -4,6 +4,7 @@ import avatar from "../images/image-avatar.png";
 import { ReactComponent as Cart } from "../images/icon-cart.svg";
 import { ReactComponent as Trash } from "../images/icon-delete.svg";
 import sneaker from "../images/image-product-1-thumbnail.jpg";
+import MobileNav from "./MobileNav";
 
 function Header({ cartCount, onCountReset }) {
   const [isCheckoutOpen, setCheckoutOpen] = useState(false);
@@ -63,6 +64,7 @@ function Header({ cartCount, onCountReset }) {
   return (
     <header className="header-container">
       <div className="header-left">
+        <MobileNav />
         <img className="logo" src={logo} alt="sneakers" />
         <a href="#" className="links">
           Collection

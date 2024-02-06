@@ -18,10 +18,10 @@ function App() {
   return (
     <div className="container">
       <Header cartCount={cartCount} onCountReset={handleCartCountReset} />
-      <div className="content-container">
+      <section className="content-container">
         <Gallery />
         <Details onAddToCart={handleAddToCart} />
-      </div>
+      </section>
     </div>
   );
 }

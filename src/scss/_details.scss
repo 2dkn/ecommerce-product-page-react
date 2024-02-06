@@ -28,6 +28,16 @@
   }
 }
 
+@media screen and (max-width: 64.5em) {
+  .details p {
+    max-width: 40rem;
+  }
+
+  .details h3 {
+    font-size: 3rem;
+  }
+}
+
 .prices {
   display: flex;
   flex-wrap: wrap;
@@ -159,4 +169,11 @@
 .cart2 {
   width: 1.5rem;
   // padding-right: rem;
+}
+
+@media screen and (max-width: 64.5em) {
+  .cart-btn {
+    margin-left: 2rem;
+    width: 20rem;
+  }
 }

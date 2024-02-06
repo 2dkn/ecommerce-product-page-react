@@ -27,10 +27,12 @@ Your users should be able to:
 
 ### Screenshot
 
+![Design preview for the E-commerce Product Page Coding Challenge](/design/ecommercePic1.png)
+
 ### Links
 
 - Solution URL: [Solution Site]()
-- Live Site URL: [Live Site](/design/ecommercePic1.png)
+- Live Site URL: [Live Site]()
 
 ### Built With
 
