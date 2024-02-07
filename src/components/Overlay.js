@@ -37,7 +37,7 @@ function Overlay({ selectedImage, onClose }) {
   return (
     <div className="overlay">
       <div className="overlay-content">
-        <div className="close-btn">
+        <div className="close-btn" alt="closes button">
           <button className="close" onClick={onClose}>
             <Close fill="hsl(26, 100%, 55%)" />
           </button>

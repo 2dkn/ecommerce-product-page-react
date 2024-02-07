@@ -45,12 +45,6 @@
     }
   }
 
-  @media screen and (max-width: 28.125em) {
-    .header-left {
-      padding-left: 12rem;
-    }
-  }
-
   .links {
     display: none;
   }
@@ -281,5 +275,33 @@
 
   .checkout-btn {
     width: 40rem;
+  }
+}
+
+@media screen and (max-width: 28.125em) {
+  .price-count {
+    gap: 3.5rem;
+  }
+
+  .checkout {
+    right: 10rem;
+    width: 38rem;
+  }
+
+  .checkout-container {
+    width: 40rem;
+  }
+
+  .checkout-btn {
+    width: 35rem;
+  }
+
+  .header-left {
+    padding-left: 13rem;
+  }
+
+  .header-right {
+    padding-right: 10rem;
+    gap: 1rem;
   }
 }

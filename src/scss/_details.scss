@@ -14,7 +14,7 @@
     letter-spacing: 1px;
   }
 
-  h3 {
+  h2 {
     font-size: 4rem;
     color: $veryDarkBlue;
     padding-bottom: 3rem;
@@ -261,7 +261,7 @@
     padding-left: 2rem;
   }
 
-  .details h3 {
+  .details h2 {
     padding-left: 2rem;
   }
 
@@ -271,5 +271,43 @@
 
   .prices p:nth-child(3) {
     padding-left: 20.8rem;
+  }
+
+  .details p {
+    max-width: 40rem;
+  }
+
+  .prices {
+    width: 42rem;
+  }
+
+  .prices p:nth-child(2) {
+    padding: 0;
+  }
+
+  .prices p:nth-child(3) {
+    padding-left: 14rem;
+  }
+
+  .cart-btn {
+    width: 38rem;
+    min-height: 5.5rem;
+    margin-left: -6rem;
+  }
+
+  .minusplus-btn {
+    width: 13rem;
+    min-height: 6rem;
+  }
+  .plusminus-btn {
+    width: 13rem;
+  }
+  .count {
+    width: 12rem;
+    padding-right: 2rem;
+  }
+
+  .counter-btn {
+    margin-left: -6rem;
   }
 }

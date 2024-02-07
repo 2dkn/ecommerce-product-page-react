@@ -83,7 +83,11 @@ function Header({ cartCount, onCountReset }) {
         </a>
       </div>
       <div className="header-right">
-        <button className="cart" onClick={toggleCheckout}>
+        <button
+          className="cart"
+          onClick={toggleCheckout}
+          aria-label="opens cart"
+        >
           <Cart fill="#69707D" />
           {isEmpty ? "" : <span className="cart-quantity">{cartCount}</span>}
         </button>

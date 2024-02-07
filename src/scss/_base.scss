@@ -103,3 +103,9 @@ body {
 .footer a:hover {
   color: hsl(26, 79%, 45%);
 }
+
+@media screen and (max-width: 28.125em) {
+  .footer {
+    padding-left: 3rem;
+  }
+}

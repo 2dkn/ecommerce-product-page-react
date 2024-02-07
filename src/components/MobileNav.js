@@ -15,7 +15,11 @@ function MobileNav() {
         <img src={menu} />
       </button>
       <div className={`mobile-nav ${isOpen ? "open" : ""}`}>
-        <button className="close-btn" onClick={toggleMenu}>
+        <button
+          className="close-btn"
+          onClick={toggleMenu}
+          aria-label="Close overlay"
+        >
           <CloseBtn
             fill="hsl(219, 9%, 45%)"
             style={{ width: 23, height: 23 }}
