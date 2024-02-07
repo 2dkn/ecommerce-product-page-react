@@ -44,7 +44,7 @@
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-  width: 20rem;
+  width: 43rem;
 
   p {
     &:first-child {
@@ -70,6 +70,7 @@
       color: $grayBlue;
       text-decoration: line-through;
       font-weight: 700;
+      padding-left: 19.8rem;
     }
   }
 }

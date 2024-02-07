@@ -27,12 +27,12 @@ Your users should be able to:
 
 ### Screenshot
 
-![Design preview for the E-commerce Product Page Coding Challenge](/design/ecommercePic2.png)
+![Design preview for the E-commerce Product Page Coding Challenge](/design/ecommercePic4.png)
 
 ### Links
 
-- Solution URL: [Solution Site]()
-- Live Site URL: [Live Site]()
+- Solution URL: [Solution Site](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6/hub)
+- Live Site URL: [Live Site](https://e-commerce-product-page-2dkn.netlify.app/)
 
 ### Built With
 

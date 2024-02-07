@@ -22,6 +22,17 @@ function App() {
         <Gallery />
         <Details onAddToCart={handleAddToCart} />
       </section>
+      <div class="footer">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Frontend Mentor
+        </a>
+        . Coded by <a href="https://github.com/2dkn">Kevin Neely</a>
+      </div>
     </div>
   );
 }
