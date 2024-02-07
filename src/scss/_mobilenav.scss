@@ -1,9 +1,11 @@
+@use "variables" as *;
+
 .mobile-nav {
   position: fixed;
   top: 0;
   left: -300px; /* Initially off-screen */
   width: 300px;
-  height: 100vh;
+  height: 120vh;
   background-color: #fff;
   transition: left 0.3s ease-in-out;
   z-index: 999; /* Ensure it's above other content */
@@ -16,7 +18,8 @@
 .menu-items {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  padding-top: 8rem;
   align-items: flex-start;
   height: 100%;
 }
@@ -27,8 +30,12 @@
 
 .menu-link {
   padding: 10px;
+  padding-left: 20px;
   text-decoration: none;
-  color: #333;
+  color: $veryDarkBlue;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: $fontFamily;
 }
 
 .menu-link:hover {
@@ -62,8 +69,8 @@
     border: none;
     background-color: transparent;
     position: absolute;
-    top: 5rem;
-    left: 1rem;
+    top: 2rem;
+    left: 2rem;
     cursor: pointer;
   }
 

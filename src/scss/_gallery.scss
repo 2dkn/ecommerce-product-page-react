@@ -37,3 +37,66 @@
   outline: 0.2rem solid $orange;
   border-radius: 1.5rem;
 }
+
+.previous-mobilebtn {
+  display: none;
+}
+
+.next-mobilebtn {
+  display: none;
+}
+
+@media screen and (max-width: 42.5em) {
+  .big-images {
+    position: relative;
+    width: 100%;
+  }
+
+  .big-sneaker {
+    border-radius: 0;
+    width: 100%;
+    min-height: 20rem;
+  }
+
+  .small-sneaker {
+    display: none;
+  }
+
+  .small-images {
+    display: none;
+  }
+
+  .previous-mobilebtn,
+  .next-mobilebtn {
+    display: block;
+    position: absolute;
+    top: 50%; /* Position vertically at the center of the image */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+  }
+
+  .previous-mobilebtn {
+    left: 12rem; /* Position on the left side of the image */
+  }
+
+  .next-mobilebtn {
+    right: 4rem; /* Position on the right side of the image */
+  }
+
+  .previous-mobilebtn svg,
+  .next-mobilebtn svg {
+    stroke: black;
+  }
+
+  .previous-mobilebtn svg:hover,
+  .next-mobilebtn svg:hover {
+    stroke: $orange;
+  }
+}
+
+@media screen and (max-width: 28.125em) {
+}

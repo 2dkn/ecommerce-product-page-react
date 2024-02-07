@@ -70,5 +70,16 @@ body {
   }
 }
 
-@media screen and (max-width: 42.188em) {
+@media screen and (max-width: 42.5em) {
+  body {
+    display: flex;
+  }
+
+  .container {
+    max-width: none;
+  }
+
+  .content-container {
+    padding-top: 0;
+  }
 }

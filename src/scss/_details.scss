@@ -74,6 +74,10 @@
   }
 }
 
+.counter-btn {
+  display: flex;
+}
+
 .buttons {
   display: flex;
   flex-direction: row;
@@ -175,5 +179,96 @@
   .cart-btn {
     margin-left: 2rem;
     width: 20rem;
+  }
+}
+
+@media screen and (max-width: 42.5em) {
+  .details {
+    display: flex;
+    width: 100%;
+    padding-left: 10rem;
+    padding-left: 10rem;
+    min-width: 60rem;
+  }
+
+  .details h1 {
+    padding-top: 1rem;
+    width: 100%;
+  }
+
+  .details h3 {
+    width: 100%;
+  }
+
+  .buttons {
+  }
+}
+
+@media screen and (max-width: 33.75em) {
+  .details {
+    display: flex;
+    padding-right: 4rem;
+  }
+
+  .details p {
+    max-width: 50rem;
+    font-size: 1.6rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .cart-btn {
+    width: 45rem;
+    min-height: 5.5rem;
+    margin-left: 0;
+  }
+
+  .minusplus-btn {
+    width: 14.5rem;
+    min-height: 6rem;
+  }
+  .plusminus-btn {
+    width: 16rem;
+  }
+  .count {
+    width: 14.5rem;
+  }
+
+  .prices {
+    width: 46rem;
+    // margin-left: 2rem;
+    justify-content: start;
+  }
+
+  .prices p:nth-child(3) {
+    padding-left: 22rem;
+  }
+}
+
+@media screen and (max-width: 28.125em) {
+  .details {
+    padding-left: 10rem;
+    padding-right: 1rem;
+  }
+
+  .details h1 {
+    padding-left: 2rem;
+  }
+
+  .details h3 {
+    padding-left: 2rem;
+  }
+
+  .details p {
+    padding-left: 2rem;
+  }
+
+  .prices p:nth-child(3) {
+    padding-left: 20.8rem;
   }
 }

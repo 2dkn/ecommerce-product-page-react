@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import menu from "../images/icon-menu.svg";
 import { ReactComponent as CloseBtn } from "../images/icon-close.svg";
-import closeBtn from "../images/icon-close.svg";
 
 function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);

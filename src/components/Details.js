@@ -35,13 +35,15 @@ function Details({ onAddToCart }) {
         <p>$250.00</p>
       </div>
       <div className="buttons">
-        <button className="minusplus-btn" onClick={handleCountDown}>
-          <Minus fill="#FF7E1B" />
-        </button>
-        <p className="count">{count}</p>
-        <button className="plusminus-btn" onClick={handleCountUp}>
-          <Plus fill="#FF7E1B" />
-        </button>
+        <div className="counter-btn">
+          <button className="minusplus-btn" onClick={handleCountDown}>
+            <Minus fill="#FF7E1B" />
+          </button>
+          <p className="count">{count}</p>
+          <button className="plusminus-btn" onClick={handleCountUp}>
+            <Plus fill="#FF7E1B" />
+          </button>
+        </div>
         <button
           className="cart-btn"
           onClick={() => {

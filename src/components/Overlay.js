@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { image1, image2, image3, image4 } from "../images";
 import { thumbnail1, thumbnail2, thumbnail3, thumbnail4 } from "../images";
 import { ReactComponent as Close } from "../images/icon-close.svg";

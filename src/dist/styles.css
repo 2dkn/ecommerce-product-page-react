@@ -61,6 +61,17 @@ body {
     width: 100%;
   }
 }
+@media screen and (max-width: 42.5em) {
+  body {
+    display: flex;
+  }
+  .container {
+    max-width: none;
+  }
+  .content-container {
+    padding-top: 0;
+  }
+}
 .details {
   display: flex;
   flex-direction: column;
@@ -124,6 +135,10 @@ body {
   color: hsl(220, 14%, 75%);
   text-decoration: line-through;
   font-weight: 700;
+}
+
+.counter-btn {
+  display: flex;
 }
 
 .buttons {
@@ -226,6 +241,78 @@ body {
     width: 20rem;
   }
 }
+@media screen and (max-width: 42.5em) {
+  .details {
+    display: flex;
+    width: 100%;
+    padding-left: 10rem;
+    padding-left: 10rem;
+    min-width: 60rem;
+  }
+  .details h1 {
+    padding-top: 1rem;
+    width: 100%;
+  }
+  .details h3 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 33.75em) {
+  .details {
+    display: flex;
+    padding-right: 4rem;
+  }
+  .details p {
+    max-width: 50rem;
+    font-size: 1.6rem;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .cart-btn {
+    width: 45rem;
+    min-height: 5.5rem;
+    margin-left: 0;
+  }
+  .minusplus-btn {
+    width: 14.5rem;
+    min-height: 6rem;
+  }
+  .plusminus-btn {
+    width: 16rem;
+  }
+  .count {
+    width: 14.5rem;
+  }
+  .prices {
+    width: 46rem;
+    justify-content: start;
+  }
+  .prices p:nth-child(3) {
+    padding-left: 22rem;
+  }
+}
+@media screen and (max-width: 28.125em) {
+  .details {
+    padding-left: 10rem;
+    padding-right: 1rem;
+  }
+  .details h1 {
+    padding-left: 2rem;
+  }
+  .details h3 {
+    padding-left: 2rem;
+  }
+  .details p {
+    padding-left: 2rem;
+  }
+  .prices p:nth-child(3) {
+    padding-left: 20.8rem;
+  }
+}
 .big-sneaker {
   border-radius: 1.5rem;
   width: 100%;
@@ -264,6 +351,57 @@ body {
   border-radius: 1.5rem;
 }
 
+.previous-mobilebtn {
+  display: none;
+}
+
+.next-mobilebtn {
+  display: none;
+}
+
+@media screen and (max-width: 42.5em) {
+  .big-images {
+    position: relative;
+    width: 100%;
+  }
+  .big-sneaker {
+    border-radius: 0;
+    width: 100%;
+    min-height: 20rem;
+  }
+  .small-sneaker {
+    display: none;
+  }
+  .small-images {
+    display: none;
+  }
+  .previous-mobilebtn,
+  .next-mobilebtn {
+    display: block;
+    position: absolute;
+    top: 50%; /* Position vertically at the center of the image */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+  }
+  .previous-mobilebtn {
+    left: 12rem; /* Position on the left side of the image */
+  }
+  .next-mobilebtn {
+    right: 4rem; /* Position on the right side of the image */
+  }
+  .previous-mobilebtn svg,
+  .next-mobilebtn svg {
+    stroke: black;
+  }
+  .previous-mobilebtn svg:hover,
+  .next-mobilebtn svg:hover {
+    stroke: hsl(26, 100%, 55%);
+  }
+}
 .header-container {
   display: flex;
   flex-direction: row;
@@ -296,13 +434,32 @@ body {
     width: 100%;
     border-bottom: 1.5px solid hsla(210, 3%, 42%, 0.185);
   }
+}
+@media screen and (max-width: 53.25em) and (max-width: 33.75em) {
+  .header-left {
+    padding-left: 10rem;
+  }
+  .header-right {
+    padding-right: 5rem;
+  }
+}
+@media screen and (max-width: 53.25em) and (max-width: 28.125em) {
+  .header-left {
+    padding-left: 12rem;
+  }
+}
+@media screen and (max-width: 53.25em) {
   .links {
     display: none;
   }
+}
+@media screen and (max-width: 53.25em) {
   .logo {
     width: 44rem;
     max-height: 34rem;
   }
+}
+@media screen and (max-width: 53.25em) {
   .header-left img {
     width: 16rem;
     max-height: 100%;
@@ -392,6 +549,7 @@ body {
   box-shadow: 1px 7px 5px rgba(0, 0, 0, 0.125);
   border-radius: 1.5rem;
   flex-direction: column;
+  z-index: 2;
 }
 
 .checkout h1 {
@@ -423,9 +581,9 @@ body {
 }
 
 .checkout-btn {
-  width: 32rem;
   min-height: 5rem;
   border: none;
+  width: 32rem;
   background-color: hsl(26, 100%, 55%);
   color: hsl(0, 0%, 100%);
   border-radius: 0.8rem;
@@ -502,6 +660,23 @@ body {
   color: hsl(219, 9%, 45%);
 }
 
+@media screen and (max-width: 42.5em) {
+  .price-count {
+    align-self: center;
+    gap: 6rem;
+  }
+  .checkout {
+    right: 1rem;
+    top: 8rem;
+    width: 50rem;
+  }
+  .checkout-container {
+    width: 42rem;
+  }
+  .checkout-btn {
+    width: 40rem;
+  }
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -515,6 +690,11 @@ body {
   flex-direction: column;
 }
 
+@media screen and (max-width: 53.25em) {
+  .overlay {
+    display: none;
+  }
+}
 .overlay-content {
   position: relative;
   max-width: 100%;
@@ -640,7 +820,7 @@ body {
   top: 0;
   left: -300px; /* Initially off-screen */
   width: 300px;
-  height: 100vh;
+  height: 120vh;
   background-color: #fff;
   transition: left 0.3s ease-in-out;
   z-index: 999; /* Ensure it's above other content */
@@ -653,7 +833,8 @@ body {
 .menu-items {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  padding-top: 8rem;
   align-items: flex-start;
   height: 100%;
 }
@@ -664,8 +845,12 @@ body {
 
 .menu-link {
   padding: 10px;
+  padding-left: 20px;
   text-decoration: none;
-  color: #333;
+  color: hsl(220, 13%, 13%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .menu-link:hover {
@@ -697,8 +882,8 @@ body {
     border: none;
     background-color: transparent;
     position: absolute;
-    top: 5rem;
-    left: 1rem;
+    top: 2rem;
+    left: 2rem;
     cursor: pointer;
   }
   .close-btn img {

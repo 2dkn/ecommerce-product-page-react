@@ -11,7 +11,7 @@ function Header({ cartCount, onCountReset }) {
   const [count, setCount] = useState(cartCount);
   const [isEmpty, setIsEmpty] = useState(cartCount === 0);
 
-  const itemPrice = 125.0; // Assuming the item price is $125.00
+  const itemPrice = 125.0;
 
   const getTotalPrice = () => {
     return (itemPrice * cartCount).toFixed(2); // Keep it formatted with two decimal places
@@ -118,7 +118,7 @@ function Header({ cartCount, onCountReset }) {
                     <Trash fill="#C3CAD9" />
                   </button>
                 </div>
-                <div>
+                <div className="checkout-container">
                   <button className="checkout-btn">Checkout</button>
                 </div>
               </>
