@@ -1,9 +1,13 @@
 @use "variables" as *;
 
+.image-container {
+  width: 100%;
+}
+
 .big-sneaker {
   border-radius: 1.5rem;
-  width: 100%;
-  height: 44rem;
+  width: 44rem;
+  // height: 44rem;
   cursor: pointer;
 }
 
@@ -11,6 +15,7 @@
   display: flex;
   padding-top: 2rem;
   gap: 1.5rem;
+  width: 44rem;
 }
 
 .small-images img:hover {
@@ -101,5 +106,22 @@
 @media screen and (max-width: 28.125em) {
   .next-mobilebtn {
     right: 9rem;
+  }
+}
+
+@media screen and (max-width: 26.563em) {
+  .image-container {
+    padding-left: 11rem;
+  }
+  .big-sneaker {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  .previous-mobilebtn {
+    left: 2rem;
+  }
+  .next-mobilebtn {
+    right: 1rem;
   }
 }

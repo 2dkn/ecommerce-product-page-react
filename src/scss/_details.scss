@@ -28,16 +28,6 @@
   }
 }
 
-@media screen and (max-width: 64.5em) {
-  .details p {
-    max-width: 40rem;
-  }
-
-  .details h3 {
-    font-size: 3rem;
-  }
-}
-
 .prices {
   display: flex;
   flex-wrap: wrap;
@@ -161,6 +151,7 @@
   font-family: $fontFamily;
   font-weight: 700;
   cursor: pointer;
+  height: 100%;
 }
 
 .cart-btn:hover {
@@ -175,11 +166,25 @@
   width: 1.5rem;
   // padding-right: rem;
 }
+@media screen and (max-width: 64.5em) {
+  .details p {
+    max-width: 40rem;
+  }
+
+  .details h3 {
+    font-size: 3rem;
+  }
+}
 
 @media screen and (max-width: 64.5em) {
   .cart-btn {
     margin-left: 2rem;
     width: 20rem;
+  }
+}
+@media screen and (max-width: 64em) {
+  .prices p:nth-child(3) {
+    padding-left: 13rem;
   }
 }
 
@@ -199,9 +204,6 @@
 
   .details h3 {
     width: 100%;
-  }
-
-  .buttons {
   }
 }
 
@@ -253,28 +255,12 @@
 
 @media screen and (max-width: 28.125em) {
   .details {
-    padding-left: 10rem;
+    padding-left: 13rem;
     padding-right: 1rem;
-  }
-
-  .details h1 {
-    padding-left: 2rem;
-  }
-
-  .details h2 {
-    padding-left: 2rem;
-  }
-
-  .details p {
-    padding-left: 2rem;
   }
 
   .prices p:nth-child(3) {
     padding-left: 20.8rem;
-  }
-
-  .details p {
-    max-width: 40rem;
   }
 
   .prices {
@@ -309,5 +295,36 @@
 
   .counter-btn {
     margin-left: -6rem;
+  }
+}
+
+@media screen and (max-width: 26.563em) {
+  .details {
+    padding-left: 14rem;
+  }
+
+  .prices p:nth-child(3) {
+    padding-left: 18.5rem;
+  }
+
+  .minusplus-btn {
+    width: 15rem;
+  }
+
+  .plusminus-btn {
+    width: 15rem;
+  }
+
+  .counter-btn {
+    width: 100%;
+    padding-left: 3rem;
+  }
+
+  .cart-btn {
+    width: 42rem;
+  }
+
+  .addcart-btn {
+    padding-left: 3rem;
   }
 }

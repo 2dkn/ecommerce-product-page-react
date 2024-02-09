@@ -38,6 +38,27 @@ body {
   padding-left: 4rem;
   gap: 11rem;
   //   max-width: 70rem;
+  width: 102rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 700;
+  padding-top: 2rem;
+}
+
+.footer a {
+  padding-left: 0.5rem;
+  text-decoration: none;
+  color: $orange;
+  cursor: pointer;
+}
+
+.footer a:hover {
+  color: hsl(26, 79%, 45%);
 }
 
 @media screen and (max-width: 66.875em) {
@@ -84,28 +105,14 @@ body {
   }
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  font-size: 1.4rem;
-  color: black;
-  font-weight: 700;
-  padding-top: 2rem;
-}
-
-.footer a {
-  padding-left: 0.5rem;
-  text-decoration: none;
-  color: $orange;
-  cursor: pointer;
-}
-
-.footer a:hover {
-  color: hsl(26, 79%, 45%);
-}
-
 @media screen and (max-width: 28.125em) {
   .footer {
     padding-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 26.563em) {
+  .footer {
+    padding-left: 11rem;
   }
 }

@@ -52,16 +52,18 @@ function Details({ onAddToCart }) {
             <Plus fill="#FF7E1B" />
           </button>
         </div>
-        <button
-          className="cart-btn"
-          onClick={() => {
-            handleAddToCart();
-            setCount(0);
-          }}
-        >
-          <img className="cart2" src={cart2} alt="cart button" />
-          Add to cart
-        </button>
+        <div className="addcart-btn">
+          <button
+            className="cart-btn"
+            onClick={() => {
+              handleAddToCart();
+              setCount(0);
+            }}
+          >
+            <img className="cart2" src={cart2} alt="cart button" />
+            Add to cart
+          </button>
+        </div>
       </div>
     </div>
   );

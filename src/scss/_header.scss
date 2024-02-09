@@ -13,65 +13,12 @@
   padding-left: 4rem;
 }
 
-@media screen and (max-width: 56.375em) {
-  .header-container {
-    gap: 6rem;
-  }
-}
-
-@media screen and (max-width: 54em) {
-  .header-container {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-
-@media screen and (max-width: 53.25em) {
-  .header-container {
-    padding-left: 0rem;
-    padding-right: 0rem;
-    gap: 0rem;
-    width: 100%;
-    border-bottom: 1.5px solid hsla(210, 3%, 42%, 0.185);
-  }
-
-  @media screen and (max-width: 33.75em) {
-    .header-left {
-      padding-left: 10rem;
-    }
-
-    .header-right {
-      padding-right: 5rem;
-    }
-  }
-
-  .links {
-    display: none;
-  }
-
-  .logo {
-    width: 44rem;
-    max-height: 34rem;
-  }
-
-  .header-left img {
-    width: 16rem;
-    max-height: 100%;
-  }
-}
-
 .header-left {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   color: $darkGrayBlue;
   gap: 4.5rem;
-}
-
-@media screen and (max-width: 56.375em) {
-  .header-left {
-    gap: 3rem;
-  }
 }
 
 .logo {
@@ -257,6 +204,59 @@
   color: $darkGrayBlue;
 }
 
+@media screen and (max-width: 56.375em) {
+  .header-left {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 56.375em) {
+  .header-container {
+    gap: 6rem;
+  }
+}
+
+@media screen and (max-width: 54em) {
+  .header-container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (max-width: 53.25em) {
+  .header-container {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    gap: 0rem;
+    width: 100%;
+    border-bottom: 1.5px solid hsla(210, 3%, 42%, 0.185);
+  }
+
+  @media screen and (max-width: 33.75em) {
+    .header-left {
+      padding-left: 10rem;
+    }
+
+    .header-right {
+      padding-right: 5rem;
+    }
+  }
+
+  .links {
+    display: none;
+  }
+
+  .logo {
+    width: 44rem;
+    max-height: 34rem;
+  }
+
+  .header-left img {
+    width: 16rem;
+    max-height: 100%;
+  }
+}
+
 @media screen and (max-width: 42.5em) {
   .price-count {
     align-self: center;
@@ -303,5 +303,11 @@
   .header-right {
     padding-right: 10rem;
     gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 26.563em) {
+  .header-right {
+    padding-right: 1rem;
   }
 }
