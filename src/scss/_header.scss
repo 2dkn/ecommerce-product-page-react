@@ -231,6 +231,26 @@
     width: 100%;
     border-bottom: 1.5px solid hsla(210, 3%, 42%, 0.185);
   }
+  @media screen and (max-width: 42.5em) {
+    .price-count {
+      align-self: center;
+      gap: 6rem;
+    }
+
+    .checkout {
+      right: 1rem;
+      top: 8rem;
+      width: 50rem;
+    }
+
+    .checkout-container {
+      width: 42rem;
+    }
+
+    .checkout-btn {
+      width: 40rem;
+    }
+  }
 
   @media screen and (max-width: 33.75em) {
     .header-left {
@@ -257,27 +277,6 @@
   }
 }
 
-@media screen and (max-width: 42.5em) {
-  .price-count {
-    align-self: center;
-    gap: 6rem;
-  }
-
-  .checkout {
-    right: 1rem;
-    top: 8rem;
-    width: 50rem;
-  }
-
-  .checkout-container {
-    width: 42rem;
-  }
-
-  .checkout-btn {
-    width: 40rem;
-  }
-}
-
 @media screen and (max-width: 28.125em) {
   .price-count {
     gap: 3.5rem;
@@ -301,7 +300,7 @@
   }
 
   .header-right {
-    padding-right: 10rem;
+    padding-right: 2rem;
     gap: 1rem;
   }
 }

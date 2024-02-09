@@ -264,7 +264,7 @@
   }
 
   .prices {
-    width: 42rem;
+    width: 44rem;
   }
 
   .prices p:nth-child(2) {
@@ -272,29 +272,33 @@
   }
 
   .prices p:nth-child(3) {
-    padding-left: 14rem;
+    padding-left: 20rem;
+  }
+
+  .addcart-btn {
+    padding-left: 4rem;
   }
 
   .cart-btn {
-    width: 38rem;
+    width: 44rem;
     min-height: 5.5rem;
     margin-left: -6rem;
   }
 
   .minusplus-btn {
-    width: 13rem;
-    min-height: 6rem;
+    width: 15rem;
   }
   .plusminus-btn {
-    width: 13rem;
+    width: 15rem;
   }
   .count {
-    width: 12rem;
+    width: 14rem;
     padding-right: 2rem;
   }
 
   .counter-btn {
-    margin-left: -6rem;
+    // margin-left: -6rem;
+    padding-right: 2rem;
   }
 }
 
@@ -308,7 +312,7 @@
   }
 
   .minusplus-btn {
-    width: 15rem;
+    width: 13rem;
   }
 
   .plusminus-btn {
@@ -317,7 +321,10 @@
 
   .counter-btn {
     width: 100%;
-    padding-left: 3rem;
+  }
+
+  .count {
+    padding-left: 5rem;
   }
 
   .cart-btn {
