@@ -34,7 +34,7 @@
   flex-direction: row;
   gap: 1rem;
   align-items: center;
-  width: 43rem;
+  width: 17rem;
 
   p {
     &:first-child {
@@ -60,7 +60,6 @@
       color: $grayBlue;
       text-decoration: line-through;
       font-weight: 700;
-      padding-left: 19.8rem;
     }
   }
 }
@@ -184,7 +183,7 @@
 }
 @media screen and (max-width: 64em) {
   .prices p:nth-child(3) {
-    padding-left: 13rem;
+    padding-left: 0.4rem;
   }
 }
 

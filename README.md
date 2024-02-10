@@ -27,7 +27,7 @@ Your users should be able to:
 
 ### Screenshot
 
-![Design preview for the E-commerce Product Page Coding Challenge](/design/ecommercePic4.png)
+![Design preview for the E-commerce Product Page Coding Challenge](/design/ecommercePic.png)
 
 ### Links
 
